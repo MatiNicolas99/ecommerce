@@ -1,0 +1,345 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+/* Contenido principal página */
+.contenedor {
+    width: 100%;
+    display:grid;
+    grid-template-columns: 300px repeat(3, auto);
+    grid-template-rows: 30px auto auto 30px;
+    grid-template-areas: 
+    "header header header header"
+    "aside main main main"
+    "aside main main main"
+    "footer footer footer footer";
+}
+ /* Contenido principal página */
+
+/* Header */
+.header {
+    text-align: center;
+    grid-area: header;
+    background-color: rgb(16, 14, 119);
+    color: azure;
+    font-size: 0.7em;
+}
+/* Header */
+.nav {
+    display: none;
+}
+/* Aside */
+.aside {
+    grid-area: aside;
+    background-color:rgb(243, 241, 241);
+    color: rgb(8, 7, 60);
+    padding: 50px 0 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+.lista {
+    list-style: none;
+    padding: 20px 0px 20px 20px ;
+}
+.aside li:hover {
+    border-radius: 5%;
+    background-color: rgb(16, 14, 119);
+    color: azure;
+}
+.aside h1{
+    font-size: 2em;
+}
+.aside h2{
+    font-size: 1.3em;
+    padding: 20px 0 0 20px;
+}
+/* Aside */
+
+/* Main */
+.main {
+    grid-area: main;
+    display: grid;
+    padding-top: 50px;
+    background-color:rgb(243, 241, 241);
+    justify-items: center;
+
+}
+.item {
+    width: fit-content;
+    display: grid;
+    row-gap: 50px;
+    column-gap: 50px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "card card1 card2"
+    "card3 card4 card5";
+}
+
+.card{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card;
+}
+.card1{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card1;
+}
+.card2{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card2;
+}
+.card3{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card3;
+}
+.card4{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card4;
+}
+.card5{
+    background-color: white;
+    border-style: solid;
+    border-width: thin;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    grid-area: card5;
+}
+.cardinfo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    color: rgb(16, 14, 119);
+}
+.item img {
+    width: 300px;
+    margin: 0;
+}
+
+.item h2{
+    font-size: 1.3em;
+    background-color: rgb(16, 14, 119);
+    color: azure;
+    margin: 0;
+    padding: 0;
+}
+.item h1{
+    font-size: 2em;
+}
+.item p {
+    font-size: 1em;
+}
+
+
+/* Main */
+
+
+/* Footer */
+.footer {
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+    grid-area: footer;
+    background-color: rgb(255, 255, 255);
+}
+.icon {
+    padding: 10px 0 0 10px;
+}
+i {
+    color: rgb(16, 14, 119);
+}
+/* Footer */
+
+
+/* MEDIA QUERYS */
+@media screen and (min-width:850px) and (max-width:1200px) {
+    .contenedor {
+        width: 100%;
+        display:grid;
+        grid-template-columns: 300px repeat(2, auto);
+        grid-template-rows: 30px auto auto auto 30px;
+        grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "footer footer footer";
+    }
+    .item img {
+        width: 250px;
+        margin: 0;
+    }
+    .nav {
+        display: none;
+    }
+    .item {
+        width: fit-content;
+        display: grid;
+        row-gap: 50px;
+        column-gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "card card1"
+        "card2 card3"
+        "card4 card5";
+    }
+}
+@media screen and (min-width:421px) and (max-width:849px) {
+    .contenedor {
+        width: 100%;
+        display:grid;
+        grid-template-columns: 300px repeat(2, auto);
+        grid-template-rows: 30px auto auto auto 30px;
+        grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "footer footer footer";
+    }
+    .item img {
+        width: 250px;
+        margin: 0;
+    }
+    .nav {
+        display: none;
+    }
+    .item {
+        width: fit-content;
+        display: grid;
+        row-gap: 50px;
+        column-gap: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, auto);
+        grid-template-areas: 
+        "card card1"
+        "card2 card3"
+        "card4 card5";
+    }
+    .item img {
+ 
+        width: 200px;
+        margin: 0;
+    }
+    .item h2{
+        font-size: 1.3em;
+        background-color: rgb(16, 14, 119);
+        color: azure;
+        margin: 0;
+        padding: 0;
+    }
+    .item h1{
+        font-size: 90%;
+    }
+    .item p {
+        font-size: 120%;
+    }
+}
+@media screen and (min-width:200px) and (max-width:420px) {
+    .contenedor {
+        width: 100%;
+        display:grid;
+        grid-template-columns: 400px;
+        grid-template-rows: 30px auto auto auto auto auto auto auto 30px;
+        grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "main"
+        "footer";
+        }
+        .nav {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            background-color:rgb(16, 14, 119);
+        }
+        .nav> p{
+            background-color: rgb(16, 14, 119);
+            color: azure;
+        }
+        .aside {
+            display: none;
+        }
+        
+        .item {
+            width: fit-content;
+            display: grid;
+            row-gap: 50px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(6, auto);
+            grid-template-areas: 
+            "card"
+            "card1"
+            "card2"
+            "card3"
+            "card4"
+            "card5";
+        }
+        .item h2{
+            font-size: 1.3em;
+            background-color: rgb(16, 14, 119);
+            color: azure;
+            margin: 0;
+            padding: 0;
+        }
+        .item h1{
+            font-size: 120%;
+        }
+        .item p {
+            font-size: 150%;
+        }
+    }
+       
+
+/* MEDIA QUERYS */
